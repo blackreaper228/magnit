@@ -1,11 +1,8 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
-const isGhPages = process.env.GH_PAGES === 'true'
-const repoName = 'Magnit' // update if your repo name differs
-
 export default defineConfig({
-  base: isGhPages ? `/${repoName}/` : '/',
+  base: './',
   build: {
     rollupOptions: {
       input: {
