@@ -1,0 +1,39 @@
+.CTA_button{
+    background-color: var(--brand);
+    color: var(--white);
+    padding: 0 30px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    height: 70px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.CTA_2_button{
+    background-color: var(--brand);
+    color: var(--white);
+    padding: 0 30px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    height: 60px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.disabled{
+    background-color: var(--grayDark);
+    color: var(--grayLight);
+}
+@media (max-width: 768px) {
+    .CTA_2_button{
+        padding: 0 20px;
+        font-size: 15px;
+        height: 46px;
+    }
+}

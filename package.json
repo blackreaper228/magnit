@@ -1,0 +1,17 @@
+{
+  "name": "magnit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "GH_PAGES=true vite build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5",
+    "gh-pages": "^6.1.1"
+  }
+}

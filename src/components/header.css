@@ -1,0 +1,113 @@
+.Header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--navHeight);
+    width: 100%;
+    padding: var(--navPadding);
+    background-color: var(--white);
+    box-shadow: 0 2px 6px #0000000d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+.Header_logo{
+    width: 280px;
+    height: 60px;
+    @media (max-width: 1919px) {
+        width: 213px;
+    }
+    @media (max-width: 1440px) {
+        width: 160px;
+    }
+}
+.Header_burger{
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 18px;
+    @media (max-width: 1024px) {
+        display: flex;
+    }
+}
+.Header_burger:hover{
+    background-color: var(--grayLight);
+}
+.Header_burger.active:hover{
+    background-color: var(--grayLight);
+}
+.Header_burger.active{
+    background-color: var(--brand);
+}
+.Header_logoAndBurger{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1001;
+    height: var(--navHeight);
+    background-color: var(--white);
+}
+.BurgerButton_line{
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    border-radius: 10px;
+}
+.HeaderLinks{
+    z-index: 1000;
+    display: flex;
+    gap: var(--navGap);
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    a{
+        color: var(--black);
+        font-weight: 400;
+        font-size: var(--navFontSize);
+        min-width: fit-content;
+        &:hover{
+            color: var(--brand);
+            font-weight: 700;
+        }
+    }
+    .active{
+        color: var(--brand);
+        font-weight: 700;
+    }
+}
+@media (max-width: 1024px) {
+    .HeaderLinks{
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: fit-content;
+        top: var(--navHeight);
+        left: 0;
+        background-color: var(--white);
+        padding-left: var(--paddingHorizontal);
+        transform: translateY(-100%);
+        transition: transform .25s ease;
+        box-shadow: 0 2px 6px #0000000d;
+        a{
+            padding: 20px 0;
+        }
+    }
+    .HeaderLinks.active{
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .HeaderLinks{
+        padding-left: 20px;
+    }
+}

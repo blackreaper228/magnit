@@ -1,0 +1,30 @@
+.Footer{
+    background-color: var(--gray);
+    color: var(--white);
+    height: fit-content;
+    width: 100%;
+    border-radius: var(--sectionRadius);
+    div{
+        padding: var(--footerPadding);
+        height: fit-content;
+        div{
+            padding: 0;
+            height: fit-content;
+        }
+    }
+}
+.border_top{
+    border-top: 1px solid var(--white);
+}
+.footer_links{
+    display: flex;
+    gap: 20px;
+    a{
+        color: var(--white);
+    }
+}
+@media (max-width: 1024px) {
+    .footer_links{
+        display: none;
+    }
+}
