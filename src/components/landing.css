@@ -1,9 +1,105 @@
+.marquee_wrapper {
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 150px;
+  width: 100%;
+}
+
+.marquee {
+  display: flex;
+  /* gap: 11.719vw; */
+  height: 120px;
+  align-items: center;
+  /* padding: 0px 150px; */
+  flex-shrink: 0;
+  animation: scroll-left 16s linear infinite;
+
+  img {
+    margin: 0px 5.859vw;
+  }
+
+  img:nth-child(1) {
+    width: auto;
+    height: 120px;
+  }
+
+  img:nth-child(2) {
+    width: auto;
+    height: 140px;
+  }
+
+  img:nth-child(3) {
+    width: auto;
+    height: 75px;
+  }
+
+  img:nth-child(4) {
+    width: auto;
+    height: 100px;
+  }
+  img:nth-child(5) {
+    width: auto;
+    height: 80px;
+  }
+
+  img:nth-child(6) {
+    width: auto;
+    height: 49px;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 section.button_middle {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+  border-radius: 0 0 40px 40px;
+  z-index: 2;
+}
+
+section.marquee_container {
+  position: relative;
+  background-color: var(--grayLight);
+  padding-top: 150px;
+
+  h1 {
+    margin-left: 150px;
+    margin-bottom: 96px;
+  }
+
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--grayLight);
+  }
+
+  &::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    bottom: -250px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--grayLight);
+  }
 }
 
 section.landing_gifki {
@@ -287,6 +383,16 @@ h2.landing_gifki_2_header {
 }
 
 @media (max-width: 1919px) {
+  section.marquee_container {
+    h1 {
+      margin-left: 0px;
+      margin-bottom: 96px;
+
+      padding: calc(var(--paddingHorizontal) / 2) var(--paddingHorizontal)
+        calc(var(--paddingHorizontal) / 2) var(--paddingHorizontal);
+    }
+  }
+
   section.landing_gifki_2 {
     padding-left: 100px;
   }
@@ -405,6 +511,15 @@ h2.landing_gifki_2_header {
 }
 
 @media (max-width: 1440px) {
+  section.marquee_container {
+    padding-top: 15px;
+    h1 {
+      margin-left: 0px;
+      padding: var(--paddingHorizontal);
+      margin-bottom: 26px;
+    }
+  }
+
   .landing_gifki_2 {
     .left-side {
       min-width: 1px;
@@ -530,6 +645,54 @@ h2.landing_gifki_2_header {
 }
 
 @media (max-width: 1024px) {
+  .marquee_wrapper {
+    margin-bottom: 125px;
+  }
+
+  .marquee {
+    img {
+      margin: 0px 5.859vw;
+    }
+
+    img:nth-child(1) {
+      width: auto;
+      height: 90px;
+    }
+
+    img:nth-child(2) {
+      width: auto;
+      height: 75px;
+    }
+
+    img:nth-child(3) {
+      width: auto;
+      height: 45px;
+    }
+
+    img:nth-child(4) {
+      width: auto;
+      height: 60px;
+    }
+    img:nth-child(5) {
+      width: auto;
+      height: 55px;
+    }
+
+    img:nth-child(6) {
+      width: auto;
+      height: 34px;
+    }
+  }
+
+  section.marquee_container {
+    padding-top: 15px;
+    h1 {
+      margin-left: 0px;
+      padding: var(--paddingHorizontal);
+      margin-bottom: 46px;
+    }
+  }
+
   h2.landing_gifki_2_header {
     font-size: 35px;
   }
@@ -624,6 +787,49 @@ h2.landing_gifki_2_header {
 }
 
 @media (max-width: 768px) {
+  section.marquee_container {
+    padding-top: 45px;
+  }
+
+  .marquee {
+    img {
+      margin: 0px 5.859vw;
+    }
+
+    img:nth-child(1) {
+      width: auto;
+      height: 50px;
+    }
+
+    img:nth-child(2) {
+      width: auto;
+      height: 60px;
+    }
+
+    img:nth-child(3) {
+      width: auto;
+      height: 30px;
+    }
+
+    img:nth-child(4) {
+      width: auto;
+      height: 45px;
+    }
+    img:nth-child(5) {
+      width: auto;
+      height: 40px;
+    }
+
+    img:nth-child(6) {
+      width: auto;
+      height: 24px;
+    }
+  }
+
+  .marquee_wrapper {
+    margin-bottom: 35px;
+  }
+
   h2.landing_gifki_2_header {
     font-size: 25px;
     margin-bottom: 0px;
